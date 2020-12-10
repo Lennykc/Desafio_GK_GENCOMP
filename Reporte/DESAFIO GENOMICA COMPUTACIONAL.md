@@ -178,7 +178,7 @@ Este pequeño código a medida que se va ejecutando FastQC va ordenando el direc
 
 <div style="text-align: right"> 
 
- **El reporte se muestra acontinuacion <i> [MULTIQC REPORT](multiqc/multiqc_report.html)** </i>
+ **El reporte se muestra acontinuacion <i> [MULTIQC REPORT](multiqc_report/fastqc_multiqc/multiqc_report.html)** </i>
 
 </div>
 
@@ -255,7 +255,7 @@ Una ves terminado el programa Trim_Galore, se procese a ejecutar MultiQC en el d
 
 <div style="text-align: right"> 
 
- **El reporte se muestra acontinuacion <i> [TRIM MULTIQC REPORT](trim_multiqc/multiqc_report.html)** </i>
+ **El reporte se muestra acontinuacion <i> [TRIM MULTIQC REPORT](multiqc_report/trim_multiqc/multiqc_report.html)** </i>
 
 </div>
 
