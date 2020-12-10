@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>ANEXOS C&Oacute;DIGOS</title>
+        <style>
+</style>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        
+        <script src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <h1 id="anexos-códigos">ANEXOS CÓDIGOS</h1>
+<p><a href="../DESAFIO%20GENOMICA%20COMPUTACIONAL.html">Volver</a></p>
+<h2 id="desafio-genomica-computacional">DESAFIO GENOMICA COMPUTACIONAL</h2>
+<div style="text-align: right">
+<h3 id="gabriel-krüger-carrasco">GABRIEL KRÜGER CARRASCO</h3>
+<h3 id="doctorado-en-bioinformática-y-biología-de-sistemas">DOCTORADO EN BIOINFORMÁTICA Y BIOLOGÍA DE SISTEMAS</h3>
+</div>
+<h3 id="codigos"><em>Codigos:</em></h3>
+<p>Todos los siguientes codigos se encuentran en el directorio ~/Reporte/anexos/codigos/</p>
+<p>Codigo 1. all_fastqc.gk. Ejecuta Fastq y Multiqc</p>
+<pre><code class="language-shell"><div><span class="hljs-meta">  #</span><span class="bash">!/bin/bash/</span>
+<span class="hljs-meta">  #</span><span class="bash"><span class="hljs-comment"># all_fastqc.gk $1</span></span>
+<span class="hljs-meta">  #</span><span class="bash"><span class="hljs-comment"># script.gk 23.nov.2020</span></span>
+  arg=$1 #Como argumento se solicita el directorio objetivo
+  
+<span class="hljs-meta">  #</span><span class="bash"><span class="hljs-comment"># Se crea un archivo lista con todos los elementos fastq del directorio objetivo</span></span>
+  ls ${arg}*.fastq &gt; files
+<span class="hljs-meta">  #</span><span class="bash"><span class="hljs-comment"># Se crea directorio destino</span></span>
+  mkdir ./fastqc
+  
+  while IFS= read line; do
+    
+    ## Ejecuta FastQC
+    fastqc ${line}
+    
+    ## Se mueven los output al directorio de salida
+    mv ${line}c.html ./fastqc/${line}c.html
+    mv ${line}c.zip ./fastqc/${line}c.zip
+  done &lt; files
+  
+<span class="hljs-meta">  #</span><span class="bash"><span class="hljs-comment"># Se elimina los archivos temporales</span></span>
+  rm files
+  
+<span class="hljs-meta">  #</span><span class="bash"><span class="hljs-comment"># Se ejecuta MultiQC en el directorio de salida</span></span>
+  multiqc ./fastq/
+</div></code></pre>
+<p>Codigo 2. trim_all.gk. Ejecuta trim-galore</p>
+<pre><code class="language-sh"><div>  <span class="hljs-comment">#!/bin/bash/</span>
+  <span class="hljs-comment">## G_K/script 23.nov.2020</span>
+  <span class="hljs-comment">## trim_all.gk $1</span>
+  <span class="hljs-comment">## $1 dir ./fastq/</span>
+  arg=<span class="hljs-variable">$1</span> <span class="hljs-comment">#Como argumento se solicita el directorio objetivo</span>
+
+  <span class="hljs-comment">## Se crea un archivo lista con todos los elementos 1.fastq del directorio objetivo</span>
+  ls <span class="hljs-variable">${arg}</span>*1.fastq &gt; files
+  
+  <span class="hljs-comment">## Se crean los directorios de salida</span>
+  mkdir ./trim
+  mkdir ./trim_report
+  mkdir ./trim_fastqc
+  
+  <span class="hljs-keyword">while</span> IFS= <span class="hljs-built_in">read</span> line; <span class="hljs-keyword">do</span>
+
+    <span class="hljs-comment">## Se guarda la variable del read 2</span>
+    line_2=<span class="hljs-variable">${line%*1.fastq}</span>2.fastq
+  
+    <span class="hljs-comment">## Se ejecuta trim_galore con los siguientes parametros: calidad &gt;25 / adaptadores illumina / cortar N / largo permitido &gt;50 / paired / </span>
+    trim_galore --quality 25 --fastqc --illumina --trim-n --length 50 --paired --cores 4 <span class="hljs-variable">${line}</span> <span class="hljs-variable">${line_2}</span>
+
+    <span class="hljs-comment">## Se mueven los archivos generados a los directorios de salida</span>
+    mv <span class="hljs-variable">${line%*.fastq}</span>.fq ./trim/<span class="hljs-variable">${line%*.fastq}</span>.fq
+    mv <span class="hljs-variable">${line_2%*.fastq}</span>.fq ./trim/<span class="hljs-variable">${line_2%*.fastq}</span>.fq
+    mv <span class="hljs-variable">${line}</span>_trimming_report.txt ./trim_report/<span class="hljs-variable">${line}</span>_trimming_report.txt
+    mv <span class="hljs-variable">${line_2}</span>_trimming_report.txt ./trim_report/<span class="hljs-variable">${line_2}</span>_trimming_report.txt
+    mv <span class="hljs-variable">${line%*.fastq}</span>_fastqc.html ./trim_fastqc/<span class="hljs-variable">${line%*.fastq}</span>_fastqc.html
+    mv <span class="hljs-variable">${line_2%*.fastq}</span>_fastqc.html ./trim_fastqc/<span class="hljs-variable">${line_2%*.fastq}</span>_fastqc.html
+    mv <span class="hljs-variable">${line%*.fastq}</span>_fastqc.zip ./trim_fastqc/<span class="hljs-variable">${line%*.fastq}</span>_fastqc.zip
+    mv <span class="hljs-variable">${line_2%*.fastq}</span>_fastqc.zip ./trim_fastqc/<span class="hljs-variable">${line_2%*.fastq}</span>_fastqc.zip
+  <span class="hljs-keyword">done</span> &lt; files
+
+  <span class="hljs-comment">## Se eliminan archivos temporales</span>
+  rm files
+</div></code></pre>
+<p>Codigo 3. bwt2.gk. Ejecuta bowtie2 y samstools y crea archivos .bam</p>
+<pre><code class="language-sh"><div><span class="hljs-meta">#!/bin/bash/</span>
+<span class="hljs-comment">## G_K/script 24.nov.2020</span>
+<span class="hljs-comment">## bwt2.gk $1</span>
+<span class="hljs-comment">## $1 dir ./trim/</span>
+arg=<span class="hljs-variable">$1</span>
+
+<span class="hljs-comment">## Se crea un archivo lista con todos los elementos .bam del directorio objetivo</span>
+ls <span class="hljs-variable">${arg}</span>*1.fq &gt; files
+
+<span class="hljs-comment">## Se crean los directorios de salida</span>
+mkdir ./mapeo
+
+<span class="hljs-keyword">while</span> IFS= <span class="hljs-built_in">read</span> line; <span class="hljs-keyword">do</span>
+    <span class="hljs-comment">## Se guarda la variable del read 2</span>
+	line_2=<span class="hljs-variable">${line%*1_val_1.fq}</span>2_val_2.fq
+    
+    <span class="hljs-comment">## Se guarda la variable de salida</span>
+	output=$(<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">$line_2</span>&quot;</span> | grep -Eo <span class="hljs-string">&quot;BC-[0-9]{10}&quot;</span>)
+
+    <span class="hljs-comment">## Se utiliza esta forma de llamar al programa para ahorrar espacio de disco y que utilice RAM para este proceso</span>
+	bowtie2 -x ./referencia/ref_index -1 <span class="hljs-variable">${line}</span> -2 <span class="hljs-variable">${line_2}</span> -p 2  | samtools view -bS | samtools sort &gt; <span class="hljs-variable">${output}</span>.bam
+    
+    <span class="hljs-comment">## Se mueven los archivos de salida al correspondiente directorio</span>
+    mv <span class="hljs-variable">${output}</span>.bam ./mapeo/<span class="hljs-variable">${output}</span>.bam
+    
+    <span class="hljs-comment">## Print de salida</span>
+    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Mapeo de <span class="hljs-variable">${line}</span> listo&quot;</span>
+<span class="hljs-keyword">done</span> &lt; files
+
+<span class="hljs-comment">## Se eliminan archivos temporales</span>
+rm files
+</div></code></pre>
+<p>Codigo 4. stats.gk. Ejecuta samstools y crea archivos con los numeros estadisticos del mapeo</p>
+<pre><code class="language-sh"><div><span class="hljs-meta">#!/bin/bash/</span>
+<span class="hljs-comment">## G_K/script 24.nov.2020</span>
+<span class="hljs-comment">## stats.gk $1</span>
+<span class="hljs-comment">## $1 dir ./mapeo/</span>
+arg=<span class="hljs-variable">$1</span>
+
+<span class="hljs-comment">## Se crea un archivo lista con todos los elementos .bam del directorio objetivo</span>
+ls <span class="hljs-variable">${arg}</span>*.bam &gt; files
+
+<span class="hljs-comment">## Se crean los directorios de salida</span>
+mkdir ./mapeo_stats
+
+<span class="hljs-keyword">while</span> IFS= <span class="hljs-built_in">read</span> line; <span class="hljs-keyword">do</span>
+    <span class="hljs-comment">## Se guarda la variable de salida</span>
+	output=$(<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">$line</span>&quot;</span> | grep -Eo <span class="hljs-string">&quot;BC-[0-9]{10}&quot;</span>)
+
+	<span class="hljs-comment">## Se ejecuta samtools stats</span>
+    samtools stats <span class="hljs-variable">${line}</span> &gt; <span class="hljs-variable">${output}</span>_stats.txt
+	
+    <span class="hljs-comment">## Se mueven los archivos de salida al correspondiente directorio</span>
+    mv <span class="hljs-variable">${output}</span>_stats.txt ./mapeo_stats/<span class="hljs-variable">${output}</span>_stats.txt
+    
+    <span class="hljs-comment">## Print de salida</span>
+    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">${line}</span> stats listo&quot;</span>
+<span class="hljs-keyword">done</span> &lt; files
+<span class="hljs-comment">## Se eliminan archivos temporales</span>
+rm files
+</div></code></pre>
+<p>Codigo 5. stats.gk. Ejecuta bcftools, <a href="http://vcfutils.pl">vcfutils.pl</a> y seqtk para crear el archivo .fasta con el genoma ensamblado</p>
+<pre><code class="language-sh"><div><span class="hljs-meta">#!/bin/bash/</span>
+<span class="hljs-comment">## G_K/script 25.nov.2020</span>
+<span class="hljs-comment">## bcf.gk $1</span>
+<span class="hljs-comment">## $1 dir ./mapeo/</span>
+arg=<span class="hljs-variable">$1</span>
+
+<span class="hljs-comment">## Se crean los directorios de salida</span>
+mkdir ./VCF_files
+mkdir ./Fasta_finales 
+
+<span class="hljs-comment">## Se crea un archivo lista con todos los elementos .bam del directorio objetivo</span>
+ls <span class="hljs-variable">${arg}</span>*.bam &gt; files
+
+<span class="hljs-keyword">while</span> IFS= <span class="hljs-built_in">read</span> line; <span class="hljs-keyword">do</span>
+	output=$(<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">$line</span>&quot;</span> | grep -Eo <span class="hljs-string">&quot;BC-[0-9]{10}&quot;</span>)
+
+    <span class="hljs-comment">## Creacion de archivos vcf</span>
+	bcftools mpileup -f referencia.fasta <span class="hljs-variable">${line}</span> &gt; <span class="hljs-variable">${output}</span>.vcf
+	<span class="hljs-comment">## Creacion de archivo fasta consenso</span>
+    bcftools call -c <span class="hljs-variable">${output}</span>.vcf | vcfutils.pl vcf2fq | seqtk seq -aQ64 -q20 &gt; <span class="hljs-variable">${output}</span>.fasta
+
+	<span class="hljs-comment">## Se mueven los archivos de salida al correspondiente directorio</span>
+    mv <span class="hljs-variable">${output}</span>.vcf ./VCF_files/<span class="hljs-variable">${output}</span>.vcf
+	mv <span class="hljs-variable">${output}</span>.fasta ./Fasta_finales/<span class="hljs-variable">${output}</span>.fasta
+	
+    <span class="hljs-comment">## echo de salida output</span>
+    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">${output}</span> listo&quot;</span>
+<span class="hljs-keyword">done</span> &lt; files
+rm files
+</div></code></pre>
+<p>Codigo 6. phy.gk. Ejecuta mafft, pangolin y iqtree para alinear las secuencias, identificar SNPs y crear un arbol filogenomico con las secuencias de metatranscriptoma y la referencia.</p>
+<pre><code class="language-sh"><div><span class="hljs-meta">#!/bin/bash/</span>
+<span class="hljs-comment">## G_K/script 27.nov.2020</span>
+<span class="hljs-comment">## phy.gk $1</span>
+arg=<span class="hljs-variable">$1</span> <span class="hljs-comment">#./Fasta_finales/</span>
+
+<span class="hljs-comment">## Se crean los directorios de salida</span>
+mkdir Alineamiento
+
+<span class="hljs-comment">## Se crean los archivo de compilacion de fasta</span>
+touch compilate.fasta
+
+<span class="hljs-comment">## Se crea un archivo lista con todos los elementos .fasta del directorio objetivo</span>
+ls <span class="hljs-variable">${arg}</span>*.fasta &gt; files
+
+<span class="hljs-keyword">while</span> IFS= <span class="hljs-built_in">read</span> line; <span class="hljs-keyword">do</span>
+	<span class="hljs-comment">## Se remplaza el encabezado</span>
+    input=$(<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">$line</span>&quot;</span> | grep -Eo <span class="hljs-string">&quot;BC-[0-9]{10}&quot;</span>)
+	cat <span class="hljs-variable">${line}</span> | sed <span class="hljs-string">&quot;s/NC_045512.2/<span class="hljs-variable">${input}</span>/&quot;</span> &gt; <span class="hljs-variable">${input}</span>.fasta2
+    <span class="hljs-comment">## Se añade al archivo compilado</span>
+	cat <span class="hljs-variable">${input}</span>.fasta2 &gt;&gt; compilate.fasta
+    <span class="hljs-comment">## Se elimina el archivo transitorio</span>
+    rm <span class="hljs-variable">${input}</span>.fasta2
+<span class="hljs-keyword">done</span> &lt; files
+<span class="hljs-comment">## Se elimina el archivo temporal</span>
+rm files
+
+<span class="hljs-comment">## Se mueve el archivo de salida al directorio de salida</span>
+mv compilate.fasta ./Alineamiento/compilate.fasta
+
+<span class="hljs-comment">## Cambiamos directorio para generar los archivos</span>
+<span class="hljs-built_in">cd</span> ./Alineamiento/
+
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;ALINEAMIENTO&quot;</span>
+mafft --auto compilate.fasta &gt; alignment.fasta
+
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;PANGOLIN&quot;</span>
+pangolin compilate.fasta --outfile compilate.csv --write-tree -t 6
+
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;IQTREE&quot;</span>
+iqtree -s alignment.fasta -nt 6
+</div></code></pre>
+
+    </body>
+    </html>
