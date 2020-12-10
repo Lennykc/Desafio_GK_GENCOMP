@@ -45,5 +45,4 @@ Se utilizaron los siguientes programas para responder al desafio ejecutados en s
  - 1 HDD 1TB
  - 1 SSHD 1TB
  
- 
- 
+ Descarge todo el Git y ejecute el archivo HTML en el directorio principal.
