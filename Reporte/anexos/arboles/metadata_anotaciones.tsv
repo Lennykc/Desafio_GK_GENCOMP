@@ -1,0 +1,72 @@
+Virus name	Accession ID	Collection date	Location	Specimen	Lineage	Clade	Source
+hCoV-19/Wuhan/WIV04/2019	EPI_ISL_402124	2019-12-30	Asia / China / Hubei / Wuhan	Bronchoalveolar lavage	B	L	Genomica
+hCoV-19/Chile/Santiago-BC-0345797632/2020	BC-0345797632	2020-04-27	PF176-Parada 3 / (M) Plaza De Puente Alto (Comuna Puente Alto)	Horizontal pole	B.1	GH	Metatranscriptoma
+hCoV-19/Chile/Santiago-BC-0345797645/2020	BC-0345797645	2020-04-18	Home	Control	B.1	GH	Metatranscriptoma
+hCoV-19/Chile/Santiago-BC-0345797802/2020	BC-0345797802	2020-04-20	Santander Bank (Comuna Ñuñoa)	ATM	B.1	GH	Metatranscriptoma
+hCoV-19/Chile/Santiago-BC-0345797815/2020	BC-0345797815	2020-04-27	Metro Bellavista de la Florida (Comuna La Florida)	ATM	B.1	GH	Metatranscriptoma
+hCoV-19/Chile/Santiago-BC-0345797817/2020	BC-0345797817	2020-04-13	Metro Bellavista de la Florida (Comuna La Florida)	ATM	B.1	GH	Metatranscriptoma
+hCoV-19/Chile/Santiago-BC-0345798943/2020	BC-0345798943	2020-04-20	PE1262-Parada 5 / (M) Bellavista De La Florida (Comuna La Florida)	Information board	B.1	GH	Metatranscriptoma
+hCoV-19/Chile/Santiago-BC-0345799013/2020	BC-0345799013	2020-04-27	PF512-Parada 2 / (M) Plaza De Puente Alto (Comuna Puente Alto)	Horizontal pole	B.1	GH	Metatranscriptoma
+hCoV-19/Chile/Santiago-BC-0361053718/2020	BC-0361053718	2020-04-27	PD64-Parada 1 / Colegio San Marcos (Comuna Macul)	Pole	B.1	GH	Metatranscriptoma
+hCoV-19/Chile/Santiago-BC-0361053744/2020	BC-0361053744	2020-04-20	Medical Center (Comuna Ñuñoa)	Door handle	B.1	GH	Metatranscriptoma
+hCoV-19/Chile/Santiago-BC-0361057091/2020	BC-0361057091	2020-04-29	Medical Center (Comuna Ñuñoa)	Door handle	B.1	GH	Metatranscriptoma
+hCoV-19/Chile/Santiago-1/2020	EPI_ISL_414579	2020-03-03	South America / Chile / Santiago	Throat swab	A.2	S	Genomica
+hCoV-19/Chile/Santiago-2/2020	EPI_ISL_414580	2020-03-05	South America / Chile / Santiago	Unknow	B.1.1	GR	Genomica
+hCoV-19/Chile/Santiago_op2d1/2020	EPI_ISL_415658	2020-03-06	South America / Chile / Santiago	Nasopharyngeal swab	A.2	S	Genomica
+hCoV-19/Chile/Santiago_op3d1/2020	EPI_ISL_415660	2020-03-07	South America / Chile / Santiago	Nasopharyngeal swab	A.2	S	Genomica
+hCoV-19/Chile/Santiago_op4d1/2020	EPI_ISL_415661	2020-03-08	South America / Chile / Santiago	Nasopharyngeal swab	A.2	S	Genomica
+hCoV-19/Chile/Santiago_3/2020	EPI_ISL_445245	2020-03-06	South America / Chile / Santiago	Throat swab	A.2	S	Genomica
+hCoV-19/Chile/Santiago_4/2020	EPI_ISL_445247	2020-03-08	South America / Chile / Santiago	Throat swab	A.2	S	Genomica
+hCoV-19/Chile/Santiago_5/2020	EPI_ISL_445248	2020-03-09	South America / Chile / Santiago	Throat swab	B.1	G	Genomica
+hCoV-19/Chile/Santiago_6/2020	EPI_ISL_445249	2020-03-09	South America / Chile / Santiago	Throat swab	B.2.1	V	Genomica
+hCoV-19/Chile/Santiago_7/2020	EPI_ISL_445250	2020-03-09	South America / Chile / Santiago	Throat swab	B.1	G	Genomica
+hCoV-19/Chile/Santiago_8/2020	EPI_ISL_445251	2020-03-10	South America / Chile / Santiago	Throat swab	B.1.1	GR	Genomica
+hCoV-19/Chile/Santiago_11/2020	EPI_ISL_445254	2020-03-11	South America / Chile / Santiago	Throat swab	B.1.74	G	Genomica
+hCoV-19/Chile/Santiago_12/2020	EPI_ISL_445255	2020-03-10	South America / Chile / Santiago	Throat swab	B.1.1.10	GR	Genomica
+hCoV-19/Chile/Santiago_15/2020	EPI_ISL_445258	2020-03-11	South America / Chile / Santiago	Throat swab	A.2	S	Genomica
+hCoV-19/Chile/Santiago_16/2020	EPI_ISL_445259	2020-03-10	South America / Chile / Santiago	Throat swab	A.2	S	Genomica
+hCoV-19/Chile/Santiago_17/2020	EPI_ISL_445260	2020-03-11	South America / Chile / Santiago	Throat swab	A.2	S	Genomica
+hCoV-19/Chile/Santiago_18/2020	EPI_ISL_445261	2020-03-11	South America / Chile / Santiago	Throat swab	B.1	G	Genomica
+hCoV-19/Chile/Santiago_19/2020	EPI_ISL_445262	2020-03-11	South America / Chile / Santiago	Throat swab	B.1	G	Genomica
+hCoV-19/Chile/Santiago_20/2020	EPI_ISL_445263	2020-03-11	South America / Chile / Santiago	Throat swab	B.1	G	Genomica
+hCoV-19/Chile/Santiago_21/2020	EPI_ISL_445264	2020-03-12	South America / Chile / Santiago	Throat swab	B.1.1.10	GR	Genomica
+hCoV-19/Chile/Santiago_23/2020	EPI_ISL_445302	2020-03-21	South America / Chile / Santiago	Throat swab	B.1.1	GR	Genomica
+hCoV-19/Chile/Santiago_24/2020	EPI_ISL_445303	2020-03-14	South America / Chile / Santiago	Throat swab	B.2	V	Genomica
+hCoV-19/Chile/Santiago_25/2020	EPI_ISL_445304	2020-03-15	South America / Chile / Santiago	Throat swab	B.1.110	GH	Genomica
+hCoV-19/Chile/Santiago_26/2020	EPI_ISL_445305	2020-03-16	South America / Chile / Santiago	Throat swab	B.1.5	G	Genomica
+hCoV-19/Chile/Santiago_27/2020	EPI_ISL_445306	2020-03-16	South America / Chile / Santiago	Throat swab	A.5	S	Genomica
+hCoV-19/Chile/Santiago_28/2020	EPI_ISL_445307	2020-03-16	South America / Chile / Santiago	Throat swab	B.1	G	Genomica
+hCoV-19/Chile/Santiago_30/2020	EPI_ISL_445309	2020-03-16	South America / Chile / Santiago	Throat swab	B.1	G	Genomica
+hCoV-19/Chile/Santiago_31/2020	EPI_ISL_445310	2020-03-16	South America / Chile / Santiago	Throat swab	B.1.110	GH	Genomica
+hCoV-19/Chile/Santiago_32/2020	EPI_ISL_445311	2020-03-17	South America / Chile / Santiago	Throat swab	B.1	G	Genomica
+hCoV-19/Chile/Santiago_33/2020	EPI_ISL_445312	2020-03-17	South America / Chile / Santiago	Throat swab	B.1	G	Genomica
+hCoV-19/Chile/Santiago_34/2020	EPI_ISL_445313	2020-03-17	South America / Chile / Santiago	Throat swab	B.1	G	Genomica
+hCoV-19/Chile/Santiago_35/2020	EPI_ISL_445314	2020-03-17	South America / Chile / Santiago	Throat swab	B.1	G	Genomica
+hCoV-19/Chile/Santiago_36/2020	EPI_ISL_445315	2020-03-19	South America / Chile / Santiago	Throat swab	B.1.1	GR	Genomica
+hCoV-19/Chile/Santiago_37/2020	EPI_ISL_445316	2020-03-17	South America / Chile / Santiago	Throat swab	B.1.110	GH	Genomica
+hCoV-19/Chile/Santiago_38/2020	EPI_ISL_445317	2020-03-17	South America / Chile / Santiago	Throat swab	B.1.1	GR	Genomica
+hCoV-19/Chile/Santiago_39/2020	EPI_ISL_445318	2020-03-19	South America / Chile / Santiago	Throat swab	B.2	V	Genomica
+hCoV-19/Chile/Santiago_41/2020	EPI_ISL_445320	2020-03-17	South America / Chile / Santiago	Throat swab	B.1	G	Genomica
+hCoV-19/Chile/Santiago_43/2020	EPI_ISL_445322	2020-03-16	South America / Chile / Santiago	Throat swab	A.1	S	Genomica
+hCoV-19/Chile/Santiago_44/2020	EPI_ISL_445323	2020-03-16	South America / Chile / Santiago	Throat swab	B.1	G	Genomica
+hCoV-19/Chile/Santiago_47/2020	EPI_ISL_445326	2020-03-21	South America / Chile / Santiago	Throat swab	B.1	G	Genomica
+hCoV-19/Chile/Santiago_48/2020	EPI_ISL_445327	2020-03-21	South America / Chile / Santiago	Throat swab	B.1.74	G	Genomica
+hCoV-19/Chile/Santiago_49/2020	EPI_ISL_445328	2020-03-23	South America / Chile / Santiago	Throat swab	B.1.110	GH	Genomica
+hCoV-19/Chile/Santiago_50/2020	EPI_ISL_445329	2020-03-23	South America / Chile / Santiago	Throat swab	B	L	Genomica
+hCoV-19/Chile/Santiago_51/2020	EPI_ISL_445330	2020-03-23	South America / Chile / Santiago	Throat swab	B.1	G	Genomica
+hCoV-19/Chile/Santiago_52/2020	EPI_ISL_445349	2020-04-01	South America / Chile / Santiago	Throat swab	B.1.1.33	GR	Genomica
+hCoV-19/Chile/Santiago_54/2020	EPI_ISL_445350	2020-04-01	South America / Chile / Santiago	Throat swab	B.1.1.1	GR	Genomica
+hCoV-19/Chile/Santiago_56/2020	EPI_ISL_445352	2020-04-01	South America / Chile / Santiago	Throat swab	B.1.1.33	GR	Genomica
+hCoV-19/Chile/Santiago_59/2020	EPI_ISL_445355	2020-03-22	South America / Chile / Santiago	Throat swab	B.1.5	G	Genomica
+hCoV-19/Chile/Santiago_60/2020	EPI_ISL_445356	2020-03-21	South America / Chile / Santiago	Throat swab	B.2	V	Genomica
+hCoV-19/Chile/Santiago_62/2020	EPI_ISL_445358	2020-03-13	South America / Chile / Santiago	Throat swab	A.5	S	Genomica
+hCoV-19/Chile/Santiago_64/2020	EPI_ISL_445360	2020-03-18	South America / Chile / Santiago	Throat swab	B.1.110	GH	Genomica
+hCoV-19/Chile/Santiago_65/2020	EPI_ISL_445361	2020-03-18	South America / Chile / Santiago	Throat swab	B.1.1	GR	Genomica
+hCoV-19/Chile/Santiago_68/2020	EPI_ISL_445364	2020-03-17	South America / Chile / Santiago	Throat swab	B.1	G	Genomica
+hCoV-19/Chile/Santiago_69/2020	EPI_ISL_445365	2020-03-20	South America / Chile / Santiago	Throat swab	B.1	GH	Genomica
+hCoV-19/Chile/Santiago_70/2020	EPI_ISL_445366	2020-03-21	South America / Chile / Santiago	Throat swab	B.1	G	Genomica
+hCoV-19/Chile/Santiago_71/2020	EPI_ISL_445367	2020-03-21	South America / Chile / Santiago	Throat swab	B.1.1.33	GR	Genomica
+hCoV-19/Chile/Santiago_72/2020	EPI_ISL_445368	2020-03-22	South America / Chile / Santiago	Throat swab	B.1.110	GH	Genomica
+hCoV-19/Chile/Santiago_75/2020	EPI_ISL_445371	2020-03-28	South America / Chile / Santiago	Throat swab	B.1	G	Genomica
+hCoV-19/Chile/Santiago-25669/2020	EPI_ISL_459862	2020-03-17	South America / Chile / Santiago	Unknow	B.1	G	Genomica
+hCoV-19/Chile/Santiago-23741/2020	EPI_ISL_468752	2020-03-14	South America / Chile / Santiago / Santiago	unknown	B.1.1.33	GR	Genomica
