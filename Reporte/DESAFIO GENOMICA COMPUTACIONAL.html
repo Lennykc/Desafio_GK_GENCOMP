@@ -387,7 +387,7 @@ Para concluir, se sumaron las muestras de infectados en las fechas tempranas de 
 </details>
 <p>Este pequeño código a medida que se va ejecutando FastQC va ordenando el directorio como corresponde para evitar perdidas de archivos y acumulación de estos. Al finalizar el bucle while se ejecuta MultiQC para generar un reporte masivo entre todos los análisis de las muestras.</p>
 <div style="text-align: right"> 
-<p><strong>El reporte se muestra acontinuacion <i> <a href="multiqc_report/fastqc_multiqc/multiqc_report.html">MULTIQC REPORT</a></strong> </i></p>
+<p><strong>El reporte se muestra acontinuacion <i> <a href="multiqc_report/fastqc_report/multiqc_report.html">MULTIQC REPORT</a></strong> </i></p>
 </div>
 <p>Del reporte se puede rescatar la magnitud de cantidad de reads que van desde 21.7 Millones hasta 34.0 Millones, también la calidad de secuenciación de promedio sobre 28 <i>Phred Score</i> lo que promete rescatar muy buena información al tener que cortar solo los adaptadores y no tomar encuentra que se perderá información al filtrar por calidad. En cambio, un estadístico que llamo mucho la atención es la cantidad de reads duplicados, desde un 80.2 a 96.5% haciendo inferir una baja diversidad en la comunidad del microbioma.</p>
 <p>El siguiente paso para depurar las muestras es aplicar trimming para cortar y filtrar las reads, quitando los adaptadores y evaluando su calidad para quedar con aquellas que  superen el umbral designado.</p>
