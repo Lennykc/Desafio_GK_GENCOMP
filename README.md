@@ -1,7 +1,9 @@
 # Desafio_GK_GENCOMP
 
 Desafío de Genomica Computacional
+
 G. Krüger
+
 Doctorado en Bioinformática y Biología de Sistemas
 
 Este repositorio cuenta con un directorio main donde estará el archivo DESAFIO_GENOMICA_COMPUTACIONAL.html, que guiará por todo los directorios asociados a responder con el desafio.
