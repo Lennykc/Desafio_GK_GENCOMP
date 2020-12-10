@@ -6,7 +6,7 @@ G. Krüger
 
 Doctorado en Bioinformática y Biología de Sistemas
 
-Este repositorio cuenta con un directorio main donde estará el archivo DESAFIO_GENOMICA_COMPUTACIONAL.html, que guiará por todo los directorios asociados a responder con el desafio.
+Este repositorio cuenta con un directorio reporte donde estará el archivo DESAFIO_GENOMICA_COMPUTACIONAL.html, que guiará por todo los directorios asociados a responder con el desafio. Cuenta con los .md en donde se escribio.
 
 Se respondieron a las 5 preguntas asociadas:
 
