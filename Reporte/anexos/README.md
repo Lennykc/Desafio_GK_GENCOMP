@@ -1,5 +1,5 @@
 
-~/Reporte/anexos/.README.md
+~/Reporte/anexos/README.md
 
 ## ANEXOS DE RESULTAODS
 En este directorio se encuentran:
