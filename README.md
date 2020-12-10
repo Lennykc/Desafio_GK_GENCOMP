@@ -35,7 +35,7 @@ Se utilizaron los siguientes programas para responder al desafio ejecutados en s
  | TRACER        | v1.7.1      | Filogenomica            |
  | FigTree       | v1.4.4      | Filogenomica            |
  
- Para el manejo de datos se utilizó python en interfaz de jupyter-lab v2.2.6
+ Para el manejo de datos se utilizó python en interfaz de jupyter-lab v2.2.6 \n
  Las especificaciones del computador con el que se trabajo:
  Procesador Intel i5-8400 2.8GHz
  Ram 32RAM (4X8Gb)
