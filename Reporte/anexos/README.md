@@ -1,7 +1,7 @@
 
 ~/Reporte/anexos/.README.md
 
-##ANEXOS DE RESULTAODS
+## ANEXOS DE RESULTAODS
 En este directorio se encuentran:
 * Resumenes de numeros de samtools para cada muestra
 * Mapas de cobertura de genomas
