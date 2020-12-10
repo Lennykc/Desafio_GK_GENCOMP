@@ -178,7 +178,7 @@ Este pequeño código a medida que se va ejecutando FastQC va ordenando el direc
 
 <div style="text-align: right"> 
 
- **El reporte se muestra acontinuacion <i> [MULTIQC REPORT](multiqc_report/fastqc_multiqc/multiqc_report.html)** </i>
+ **El reporte se muestra acontinuacion <i> [MULTIQC REPORT](multiqc_report/fastqc_report/multiqc_report.html)** </i>
 
 </div>
 
